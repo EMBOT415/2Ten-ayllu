@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <link href="https://fonts.googleapis.com/css?family=League+Script" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel="stylesheet">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body class=" cms-index-index cms-home">
@@ -27,20 +28,40 @@
 
 <!-- HEADER START -->
             <header class="page-header">
+
+
+
+
+
                 <div class="header__wrapper">
+                    <div class="drawer-nav">
+                        <div class="drawer-nav__close">&times</div>
+                        <div class="drawer-inner">
+                            <ul class="drawer-nav__menu">
+                                <li class="drawer-nav__item"><a href="#">store</a></li>
+                                <li class="drawer-nav__item"><a href="#">charity</a></li>
+                                <li class="drawer-nav__item"><a href="#">about</a></li>
+                            </ul>
+                        </div>    
+                    </div>
                     <div class="header-nav">
                         <div class="header-nav__wrapper">
+                            <div class="hamburger">
+                                <small></small>
+                                <small></small>
+                                <small></small>
+                            </div>
                             <div class="header-nav__logo">
                                 <img src="img/top-navigation-logo.png">
                             </div>
-                            <div class="drawer center-nav__wrap">
-                                <div class="drawer-inner center-nav__mobile">
-                                <ul class="center-nav">
-                                    <li class="nav-item"><a href="#">store</a></li>
-                                    <li class="nav-item"><a href="#">charity</a></li>
-                                    <li class="nav-item"><a href="#">about</a></li>
-                                </ul>
-                             </div>    
+                            <div class="center-nav__wrap">
+<!--                                 <div class="center-nav__desktop"> -->
+                                    <ul class="center-nav">
+                                        <li class="nav-item"><a href="#">store</a></li>
+                                        <li class="nav-item"><a href="#">charity</a></li>
+                                        <li class="nav-item"><a href="#">about</a></li>
+                                    </ul>
+<!--                                 </div>     -->
                             </div>
                             <div class="right-nav__wrap">
                                 <ul class="right-nav">
@@ -53,9 +74,6 @@
                 </div>
             </header>
 <!-- HEADER ENDS -->
-            <div class="top-container">
-                <!-- <p>TOP-CONTAINER</p> -->
-            </div>
 <!-- MAIN CONTAINER START -->
             <div class="main-container col1-layout">
                 <div class="main">
@@ -99,7 +117,7 @@
                             <div class="list-item">
                                 <div class="list-content">
                                     <div class="caption">
-                                        <div class="caption-script">How did you <span>change </span>today?</div>
+                                        <div class="caption-script collection-caption">How did you <span>change </span>today?</div>
                                         <div class="home-cta">Share Your Story</div>
                                     </div>
                                 </div>
@@ -179,13 +197,9 @@
 
 <!-- CONTAINER HOME-MAIN-CONTENT START -->                        
 
+<div class="container home-main-content">
+</div>
 
-
-
-
-
-<!-- <div class="container home-main-content">-->
-<!-- </div> -->
 <!-- CONTAINER HOME-MAIN-CONTENT ENDS -->
                     </div>
 <!-- COL-MAIN ENDS -->                 
@@ -193,8 +207,35 @@
 <!-- MAIN ENDS -->            
             </div>
 <!-- MAIN CONTAINER ENDS -->
+
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-content">
+                    <div class="footer-caption">
+                        <div class="caption-script">Join the <span class="caption-script__block block-font">ayllu</span> community</div>
+                        <div class="caption-block">Be the first to know about new products and stories from your community</div>
+                    </div>
+                    <div class="footer-newsletter__subscribe">
+                        <div class="footer-newsletter__email"><a href="">Email</a></div>
+                        <div class="footer-newsletter__subscribe-button"><a href="">subscribe</a></div>
+                    </div>
+                    <div class="footer-social"></div>
+                    <div class="footer-menu__wrapper">
+                        <ul class="footer-menu__list">
+                            <li class="footer-menu__item">Our Story</li>
+                            <li class="footer-menu__item">Help</li>
+                            <li class="footer-menu__item">Legal</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
         </div>
 <!-- PAGE ENDS -->
+
+
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
@@ -209,5 +250,21 @@
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X','auto');ga('send','pageview');
         </script>
+        <!-- EMILY mobile nav script -->
+
+
+<script>
+$(document).ready(function(){
+    $(".drawer-nav__close").click(function(){
+        $(".drawer-nav").removeClass("drawer-nav__show");
+        $(".drawer-nav").addClass("drawer-nav__hide");
+    });
+    $(".hamburger").click(function(){
+        $(".drawer-nav").removeClass("drawer-nav__hide");
+        $(".drawer-nav").addClass("drawer-nav__show");
+    });
+});
+</script>
+
     </body>
 </html>
