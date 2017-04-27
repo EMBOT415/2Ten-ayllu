@@ -288,125 +288,22 @@ textarea {
     box-sizing: border-box;
 }
 
-
+section:after{
+    content:'';
+    clear:both;
+    display:table;
+}
 
 
 /* HEADER CSS */
 
 
-/*.navBar {
-      min-width: 100%;
-      border:1px solid purple;
-      padding: 15px 30px;
-}
-.navBar_logo {
-      width: 25%;
-}
-.center-nav__wrap {
-    width: 50%;
-    text-align: center
-}
-.center-nav li {
-    margin: 0 25px;
-}
-.right-nav__wrap {
-    width:25%;
-    text-align: right;
-}
-.navBar_wrapper {
-    margin: 0 auto;
-}
-nav ul {
-    margin:0;
-    padding:0;
-      list-style-type: none;
-      border: 1px solid blue;
-}
-.center-nav {
-    padding:0;
-}
-.right-nav {
-    padding:0;
-}
-
-nav ul a {
-    color: grey;
-    text-decoration: none;
-    transition: all .5s ease;
-    padding: 3px 7px;
-}
-nav ul a:hover {
-    color: black;
-}
-nav li {
-    display: inline-block;
-}
-nav #menu-toggle {
-    display: none;
-}
-nav .label-toggle {
-    display: none;
-}
-nav .navBar_wrapper {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-}
-@media screen and (max-width: 768px) {
-    nav nav ul a {
-        color: grey;
-    }
-    nav ul {
-        display: inline-block;
-        height: 0;
-        list-style-type: none;
-        opacity: 0;
-        text-align: center;
-        transition: all 1s ease;
-        width: 100%;
-        visibility: hidden;
-        margin:0;
-        padding:0;
-    }
-
-    nav li {
-        border-bottom: 2px solid #53354A;
-        color: grey;
-        display: inline-block;
-        font-size: 1.5em;
-        padding: 2em 0;
-    }
-    nav #menu-toggle:checked ~ ul {
-        opacity: 1;
-        height: 100vh;
-        visibility: visible;
-    }
-    nav .label-toggle {
-        background: linear-gradient(to bottom, grey 0%, grey 20%, transparent 20%, transparent 40%, grey 40%, grey 60%, transparent 60%, transparent 80%, grey 80%, grey 100%);
-        cursor: pointer;
-        display: block;
-        float: right;
-        height: 35px;
-        margin-top: 1em;
-        width: 35px;
-    }
-    nav .navBar_wrapper {
-        align-items: center;
-        display: flex;
-        justify-content: space-between;
-    }
-}
-*/
-
-
-
 .header-nav {
-      min-width: 100%;
-      border:1px solid purple;
-      padding: 15px 30px;
+    min-width: 100%;
+    padding: 15px 30px;
 }
-.navBar_logo {
-      width: 25%;
+.header-nav__logo {
+    width: 15%;
 }
 .center-nav__wrap {
     width: 50%;
@@ -416,23 +313,22 @@ nav .navBar_wrapper {
     margin: 0 25px;
 }
 .right-nav__wrap {
-    width:25%;
+    width:15%;
     text-align: right;
 }
 .header-nav__wrapper {
     margin: 0 auto;
 }
-.header-nav  ul {
-    margin:0;
-    padding:0;
-      list-style-type: none;
-      border: 1px solid blue;
-}
 .center-nav {
     padding:0;
 }
 .right-nav {
     padding:0;
+}
+.header-nav  ul {
+    margin:0;
+    padding:0;
+    list-style-type: none;
 }
 .header-nav  ul a {
     color: grey;
@@ -443,63 +339,33 @@ nav .navBar_wrapper {
 .header-nav  ul a:hover {
     color: black;
 }
-.header-nav  li {
+.header-nav  ul a {
+    color: grey;
+}
+.header-nav li {
     display: inline-block;
 }
-.header-nav  #menu-toggle {
-    display: none;
+.header-nav li {
+    color: grey;
+    display: inline-block;
 }
-.header-nav  .label-toggle {
-    display: none;
-}
-.header-nav  .header-nav__wrapper {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-}
-@media screen and (max-width: 768px) {
-    .header-nav  ul a {
-        color: grey;
-    }
-    .header-nav  ul {
-        display: inline-block;
-        height: 0;
-        list-style-type: none;
-        opacity: 0;
-        text-align: center;
-        transition: all 1s ease;
-        width: 100%;
-        visibility: hidden;
-        margin:0;
-        padding:0;
-    }
 
-    .header-nav  li {
-        border-bottom: 2px solid #53354A;
-        color: grey;
-        display: inline-block;
-        font-size: 1.5em;
-        padding: 2em 0;
-    }
-    .header-nav  #menu-toggle:checked ~ ul {
-        opacity: 1;
-        height: 100vh;
-        visibility: visible;
-    }
-    .header-nav  .label-toggle {
-        background: linear-gradient(to bottom, grey 0%, grey 20%, transparent 20%, transparent 40%, grey 40%, grey 60%, transparent 60%, transparent 80%, grey 80%, grey 100%);
-        cursor: pointer;
-        display: block;
-        float: right;
-        height: 35px;
-        margin-top: 1em;
-        width: 35px;
-    }
+
+@media screen and (min-width: 768px) {
     .header-nav .header-nav__wrapper {
         align-items: center;
         display: flex;
         justify-content: space-between;
     }
+
+  .header-nav  ul {
+        list-style-type: none;
+        display: inline-block;
+        list-style-type: none;
+        text-align: center;
+        transition: all 1s ease;
+        width: 100%;
+    }
 }
 
 
@@ -515,15 +381,8 @@ nav .navBar_wrapper {
 
 
 
+/* HERO CSS */
 
-
-
-
-
-
-
-
-/* HERO */
 .hero {
     /*margin: 5px 0px;*/
 }
@@ -553,7 +412,6 @@ nav .navBar_wrapper {
     left:0;
     right:0;
     text-align: center;
-
 }
 .hero_logo img{
     max-width: 200px;
@@ -586,6 +444,8 @@ nav .navBar_wrapper {
     }
 }
 
+
+
 /* ANIMATION */
 .animation {
     margin: 5px 0px;
@@ -607,11 +467,9 @@ nav .navBar_wrapper {
     background-position: center center;
 }
 
+
+
 /* COLLECTIONS */
-.collections {
-/*    background-color: linen;
-    border: 1px solid red;*/
-}
 
 .collection-image_1 {
     background-image: url("../img/iStock-520712254-bw.jpg");
@@ -622,38 +480,20 @@ nav .navBar_wrapper {
 
 .square {
     position: relative;
-/*    box-sizing:border-box;*/
     padding-bottom : 66.666%; 
-    /*overflow:hidden;*/
     height: 0;
-/*    border:1px solid black;*/
 }
-
 .content {
     position:absolute;
     height:100%; 
     width:100%; 
     text-align: center;
 }
-
-
 .bg {
     background-position:center center;
     background-repeat:no-repeat;
     background-size:cover; 
 }
-/*.collection-caption__wrapper{
-    position: relative;
-    height: 100%;
-}
-.collection-caption {
-    position: absolute;
-    top: 50%;
-    left:0;
-    right:0;
-    transform: translateY(-50%);
-    text-align: center;
-}*/
 .home-cta {
     border: 1px solid Black;
     width: 50%;
@@ -661,11 +501,18 @@ nav .navBar_wrapper {
     text-align: center;
     margin:0 auto;
 }
+.caption {
+    padding: 75px 0;
+}
+.caption-script {
+    font-family: 'League Script', cursive;
+    padding-bottom: 30px;
+}
+.caption-uppercase {
+    text-transform: uppercase;
+    padding-bottom: 30px;
+}
 
-
-
-
-/*Flex items*/
 .list {
     display: flex;
     flex-wrap: wrap;
@@ -700,17 +547,11 @@ nav .navBar_wrapper {
     .list-item:nth-of-type(4) { order: 3; }
 }
 
-.caption {
-    padding: 75px 0;
-}
-.caption-script {
-    font-family: 'League Script', cursive;
-    padding-bottom: 30px;
-}
-.caption-uppercase {
-    text-transform: uppercase;
-    padding-bottom: 30px;
-}
+
+
+
+/* DONATE CSS */
+
 .donate-banner {
     background-color: #E4EFF0;
     margin: 0 auto;
@@ -718,7 +559,6 @@ nav .navBar_wrapper {
     height: 100%;
     padding: 30px;
 }
-
 .donate-banner__contents {
     max-width: 500px;
     margin: 0 auto;
@@ -733,8 +573,6 @@ nav .navBar_wrapper {
     top: 50%;
     z-index: 1;
     margin-top: -66px;
-/*    float: left;
-    margin-left: -162px;*/
 }
 .donate-banner__logo{
     height: 130px;
@@ -747,11 +585,6 @@ nav .navBar_wrapper {
 .donate-banner__caption p {
     font-size: 12px;
 }
-section:after{
-    content:'';
-    clear:both;
-    display:table;
-}
 
 
 
@@ -767,7 +600,9 @@ section:after{
 
 
 
-/*Flex items*/
+
+/* INSTA ITEMS CSS*/
+
 .INSTA {
     display: flex;
     flex-wrap: wrap;
@@ -775,7 +610,6 @@ section:after{
 .INSTA-item {
     display: flex; 
     width: 50%;
-
     box-sizing: border-box;
 }
 .INSTA-content {
@@ -783,15 +617,8 @@ section:after{
     flex-direction: column;
     width: 100%;
     text-align: center;
-        margin:5px;
+    margin:5px;
 }
-
-@media all and (min-width: 768px) {
-  .INSTA-item {
-    width: 25%;
-  }
-}
-
 .INSTA-image_1 {
     background-image: url("../img/Banner-4-shop-the-collection.jpg");
 }
@@ -806,9 +633,14 @@ section:after{
 }
 .INSTA-square {
     position: relative;
-/*    box-sizing:border-box;*/
     padding-bottom : 50%; 
-    /*overflow:hidden;*/
     height: 0;
-/*    border:1px solid black;*/
 }
+
+@media all and (min-width: 768px) {
+    INSTA-item {
+        width: 25%;
+    }
+}
+
+
