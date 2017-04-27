@@ -290,27 +290,40 @@ textarea {
 body {
     font-family: 'Lato', sans-serif;
 }
-.script {
-
+.script-font {
+    font-family: 'League Script', cursive;
 }
 .block-font {
     font-family: 'Lato', sans-serif;
+}
+.uppercase {
+    text-transform: uppercase;
 }
 section:after{
     content:'';
     clear:both;
     display:table;
 }
-
-
-
 .js-drawer-open {
-/*    height: 100%;*/
     overflow: hidden;
-/*    width: 100%;
-    position: fixed;*/
  }
 
+.drawer {
+    width: 300px;
+    position:fixed;
+    top:0;
+    bottom:0;
+    background-color: white;
+    z-index: 100;
+    padding: 0 15px 15px;
+    max-width: 95%;
+    color: #000;
+    -webkit-transition: all 0.35s cubic-bezier(0.46, 0.01 , 0.32, 1);
+    -moz-transition: all 0.35s cubic-bezier(0.46, 0.01 , 0.32, 1);
+    -ms-transition: all 0.35s cubic-bezier(0.46, 0.01 , 0.32, 1);
+    -o-transition: all 0.35s cubic-bezier(0.46, 0.01 , 0.32, 1);
+    transition: all 0.35s cubic-bezier(0.46, 0.01 , 0.32, 1);
+}
 
 
 /* HEADER CSS */
@@ -324,16 +337,15 @@ section:after{
 .header-nav__logo {
     width: 15%;
 }
-.right-nav__wrap {
-    width:15%;
-    text-align: right;
-}
 .header-nav__wrapper {
     margin: 0 auto;
 }
+.center-nav__wrap {
+    display:none;
+}
 .right-nav {
     padding:0;
-    position:fixed;
+    position:absolute;
     top:25px;
     right:10px;
 }
@@ -371,11 +383,9 @@ section:after{
     color: grey;
     display: inline-block;
 }
-.center-nav__wrap {
-    display:none;
-}
-@media screen and (min-width: 768px) {
 
+
+@media screen and (min-width: 768px) {
     .header-nav .header-nav__wrapper {
         align-items: center;
         display: flex;
@@ -420,7 +430,6 @@ section:after{
         right:0;
         text-align: right !important;
     }
-
 }
 
 
@@ -428,22 +437,7 @@ section:after{
 
 .drawer-nav {
     transform: translateX(-100%);
-    width: 300px;
-    position:fixed;
-    top:0;
-    bottom:0;
     left:0;
-    background-color: white;
-    z-index: 100;
-    position: fixed;
-    padding: 0 15px 15px;
-    max-width: 95%;
-    color: #000;
-    -webkit-transition: all 0.35s cubic-bezier(0.46, 0.01 , 0.32, 1);
-    -moz-transition: all 0.35s cubic-bezier(0.46, 0.01 , 0.32, 1);
-    -ms-transition: all 0.35s cubic-bezier(0.46, 0.01 , 0.32, 1);
-    -o-transition: all 0.35s cubic-bezier(0.46, 0.01 , 0.32, 1);
-    transition: all 0.35s cubic-bezier(0.46, 0.01 , 0.32, 1);
 }
 .drawer-nav__close {
     color: grey;
@@ -482,7 +476,7 @@ section:after{
     display: inline-block;
     width: 36px;
     cursor: pointer;
-    position: fixed;
+    position: absolute;
     top: 20px;
     z-index: 90;
     padding: 5px;
@@ -511,21 +505,7 @@ section:after{
 .drawer-cart {
     transform: translateX(100%);
     width: 300px;
-    position:fixed;
-    top:0;
-    bottom:0;
     right:0;
-    background-color: white;
-    z-index: 100;
-    position: fixed;
-    padding: 0 15px 15px;
-    max-width: 95%;
-    color: #000;
-    -webkit-transition: all 0.35s cubic-bezier(0.46, 0.01 , 0.32, 1);
-    -moz-transition: all 0.35s cubic-bezier(0.46, 0.01 , 0.32, 1);
-    -ms-transition: all 0.35s cubic-bezier(0.46, 0.01 , 0.32, 1);
-    -o-transition: all 0.35s cubic-bezier(0.46, 0.01 , 0.32, 1);
-    transition: all 0.35s cubic-bezier(0.46, 0.01 , 0.32, 1);
 }
 .drawer-cart__close {
     color: grey;
@@ -562,7 +542,6 @@ section:after{
 
 
 /* HERO CSS */
-
 
 .hero_image-wrapper {
     position: relative;
@@ -622,7 +601,8 @@ section:after{
 
 
 
-/* ANIMATION */
+/* ANIMATION CSS */
+
 .animation {
     margin: 5px 0px;
 }
@@ -647,12 +627,6 @@ section:after{
 
 /* COLLECTIONS */
 
-.collection-image_1 {
-    background-image: url("../img/iStock-520712254-bw.jpg");
-}
-.collection-image_2 {
-    background-image: url("../img/Banner-4-shop-the-collection.jpg");
-}
 .square {
     position: relative;
     padding-bottom : 66.666%; 
@@ -669,6 +643,12 @@ section:after{
     background-repeat:no-repeat;
     background-size:cover; 
 }
+.collection-image_1 {
+    background-image: url("../img/iStock-520712254-bw.jpg");
+}
+.collection-image_2 {
+    background-image: url("../img/Banner-4-shop-the-collection.jpg");
+}
 .home-cta {
     border: 1px solid Black;
     width: 50%;
@@ -678,10 +658,6 @@ section:after{
 }
 .caption {
     padding: 50px 0;
-
-}
-.caption-script {
-    font-family: 'League Script', cursive;
 }
 .collection-caption {
     padding-bottom: 30px;
@@ -763,7 +739,7 @@ section:after{
     width: 130px;
 }
 .donate-banner__caption h2 {
-    font-size: 18px;
+    font-size: 16px;
     text-transform: uppercase;
 }
 .donate-banner__caption p {
@@ -771,14 +747,16 @@ section:after{
 }
 
 
-
-
-
-
-
-
-
-
+@media all and (min-width: 768px) {
+    .donate-banner__contents {
+        max-width: 600px;
+    }
+}
+@media all and (min-width: 900px) {
+    .donate-banner__contents {
+        max-width: 700px;
+    }
+}
 
 
 
@@ -787,52 +765,56 @@ section:after{
 
 /* INSTA ITEMS CSS*/
 
-.INSTA {
+.instagram-section {
     display: flex;
     flex-wrap: wrap;
+    margin: 3px;
 }
-.INSTA-item {
+.instagram-item {
     display: flex; 
     width: 50%;
     box-sizing: border-box;
 }
-.INSTA-content {
+.instagram-content {
     display: flex;
     flex-direction: column;
     width: 100%;
     text-align: center;
-    margin:5px;
+    margin:3px;
 }
-.INSTA-image_1 {
-    background-image: url("../img/Banner-4-shop-the-collection.jpg");
-}
-.INSTA-image_2 {
-    background-image: url("../img/Banner-4-shop-the-collection.jpg");
-}
-.INSTA-image_3 {
-    background-image: url("../img/Banner-4-shop-the-collection.jpg");
-}
-.INSTA-image_4 {
-    background-image: url("../img/Banner-4-shop-the-collection.jpg");
-}
-.INSTA-square {
+.instagram-wrapper {
     position: relative;
     padding-bottom : 50%; 
     height: 0;
 }
+.instagram-image_1 {
+    background-image: url("../img/Banner-4-shop-the-collection.jpg");
+}
+.instagram-image_2 {
+    background-image: url("../img/Banner-4-shop-the-collection.jpg");
+}
+.instagram-image_3 {
+    background-image: url("../img/Banner-4-shop-the-collection.jpg");
+}
+.instagram-image_4 {
+    background-image: url("../img/Banner-4-shop-the-collection.jpg");
+}
 
 @media all and (min-width: 768px) {
-    INSTA-item {
+    .instagram-item {
         width: 25%;
     }
 }
 
+
+
+
 /* FOOTER CSS */
+
 .footer-container {
     max-width: 500px;
     margin: 0 auto;
     text-align: center;
-/*    color: grey;*/
 }
 .footer-content{
     margin: 30px;
@@ -840,14 +822,8 @@ section:after{
 .footer-caption {
     margin-bottom: 20px;
 }
-.footer-caption .caption-script {
+.footer-caption .script-font {
     font-size: 24px;
-}
-.caption-script__block {
-    text-transform: uppercase;
-}
-.caption-block {
-    font-weight: 100;
 }
 .footer-menu__list {
     padding:0;
@@ -885,6 +861,20 @@ section:after{
     width: 150px;
     text-align: center;
     margin: 0 auto;
+}
+.footer-icon {
+    display: inline-block;
+    background-color: grey;
+    border-radius: 50%;
+    line-height:24px;
+    margin: 20px;
+    height:35px;
+    width: 35px;
+}
+.footer-icon i {
+    font-size: 24px;
+    color:white;
+    padding: 5px;
 }
 
 @media all and (min-width: 600px) {
