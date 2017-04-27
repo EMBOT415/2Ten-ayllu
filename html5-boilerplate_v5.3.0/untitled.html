@@ -1,0 +1,89 @@
+
+
+<style>
+.landing-header {
+	margin-bottom: 30px
+}
+
+.ayllu-image-wrap{
+	height: 0;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position:relative;
+}
+
+.landing-header{
+	padding-bottom:0!important;
+}
+
+.ayllu__wrap{
+	position:absolute;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+
+.ayllu__video__header {
+	padding-bottom:91.96%;
+	position:relative;
+	height:0;
+    background-image: url({{media url="wysiwyg/blingv2/Peter-Thomas-Roth/HB-1-mob.jpg"}});
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: 0;
+}
+@media (min-width:768px) {
+	.ayllu__video__header {
+		padding-bottom:36%;
+		background-image: url({{media url="wysiwyg/blingv2/Peter-Thomas-Roth/HB-1.jpg"}});
+	}
+}
+
+.ayllu-video-text {
+ 	position: absolute;
+	top: 50%;
+ 	left:50%;
+ 	transform: perspective(1px) translateY(-50%);
+    display:none;
+}
+
+@media (min-width:1025px) {
+	.ayllu-video-text {
+        display: block;
+	}
+	.ayllu__video__header {
+		background: none;
+	}
+}
+</style>
+
+
+<div class="landing-wrap">
+<div class="landing-header">
+<div class="ayllu__video__header">
+<div class="ayllu__wrap">
+
+<img src="{{media url="wysiwyg/blingv2/Peter-Thomas-Roth/HB-1-mob.jpg"}}" alt="" />
+<div class="ayllu-video-wrapper">
+<div class="ayllu-video-text">
+<img src="{{media url="wysiwyg/ayllu/Hero-banner-video-logo-text.png"}}" alt="" /></div>
+</div>
+
+
+</div>
+</div>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+
