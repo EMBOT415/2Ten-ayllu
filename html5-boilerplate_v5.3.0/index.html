@@ -44,6 +44,12 @@
                             </ul>
                         </div>    
                     </div>
+                    <div class="drawer-cart">
+                        <div class="drawer-cart__close">&times</div>
+                        <div class="drawer-cart__inner">
+                            these are the items in your cart
+                        </div>    
+                    </div>
                     <div class="header-nav">
                         <div class="header-nav__wrapper">
                             <div class="hamburger">
@@ -55,18 +61,16 @@
                                 <img src="img/top-navigation-logo.png">
                             </div>
                             <div class="center-nav__wrap">
-<!--                                 <div class="center-nav__desktop"> -->
-                                    <ul class="center-nav">
-                                        <li class="nav-item"><a href="#">store</a></li>
-                                        <li class="nav-item"><a href="#">charity</a></li>
-                                        <li class="nav-item"><a href="#">about</a></li>
-                                    </ul>
-<!--                                 </div>     -->
+                                <ul class="center-nav">
+                                    <li class="nav-item"><a href="#">store</a></li>
+                                    <li class="nav-item"><a href="#">charity</a></li>
+                                    <li class="nav-item"><a href="#">about</a></li>
+                                </ul>
                             </div>
                             <div class="right-nav__wrap">
                                 <ul class="right-nav">
                                     <li class="nav-item"><a href="#">sign in</a></li>
-                                    <li class="nav-item"><a href="#">cart</a></li>
+                                    <li class="nav-item" id="cart"><a href="#">cart</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -258,10 +262,22 @@ $(document).ready(function(){
     $(".drawer-nav__close").click(function(){
         $(".drawer-nav").removeClass("drawer-nav__show");
         $(".drawer-nav").addClass("drawer-nav__hide");
+        $("body").removeClass("js-drawer-open");
     });
     $(".hamburger").click(function(){
         $(".drawer-nav").removeClass("drawer-nav__hide");
         $(".drawer-nav").addClass("drawer-nav__show");
+        $("body").addClass("js-drawer-open");
+    });
+    $(".drawer-cart__close").click(function(){
+        $(".drawer-cart").removeClass("drawer-cart__show");
+        $(".drawer-cart").addClass("drawer-cart__hide");
+        $("body").removeClass("js-drawer-open");
+    });
+    $("#cart").click(function(){
+        $(".drawer-cart").removeClass("drawer-cart__hide");
+        $(".drawer-cart").addClass("drawer-cart__show");
+        $("body").addClass("js-drawer-open");
     });
 });
 </script>
