@@ -289,6 +289,7 @@ textarea {
 }
 body {
     font-family: 'Lato', sans-serif;
+    font-weight:300;
 }
 .script-font {
     font-family: 'League Script', cursive;
@@ -378,12 +379,26 @@ section:after{
 }
 .header-nav li {
     display: inline-block;
+    text-transform: uppercase;
+    font-size: 12px;
 }
 .header-nav li {
     color: grey;
     display: inline-block;
 }
-
+#cart {
+    display: inline-block;
+    background-color: grey;
+    border-radius: 50%;
+    line-height:24px;
+    height:24px;
+    width: 24px;
+    text-align: center !important;
+}
+.fa-shopping-bag {
+    padding:5px;
+    color:white;
+}
 
 @media screen and (min-width: 768px) {
     .header-nav .header-nav__wrapper {
@@ -407,7 +422,7 @@ section:after{
         margin:0;
     }
     .center-nav__wrap {
-        width: 50%;
+        width: 60%;
         text-align: center;
         display:block;
     }
@@ -419,7 +434,7 @@ section:after{
         right:0;
         text-align: center;
     }
-    .center-nav li {
+    .center-nav li:nth-child(2) {
         padding: 0px 30px;
     }
     .right-nav  {
@@ -662,8 +677,7 @@ section:after{
 .collection-caption {
     padding-bottom: 30px;
 }
-.caption-uppercase {
-    text-transform: uppercase;
+.list-caption {
     padding-bottom: 30px;
 }
 .list {
@@ -722,31 +736,56 @@ section:after{
 .donate-banner__contents {
     max-width: 500px;
     margin: 0 auto;
-    padding-left: 162px;
     position: relative;
 }
 .donate-banner__logo-wrapper{
     width: 132px;
     height: 132px;
-    position:absolute;
-    left: 0;
-    top: 50%;
+    margin: 0 auto;
     z-index: 1;
-    margin-top: -66px;
 }
 .donate-banner__logo{
     height: 130px;
     width: 130px;
 }
+.donate-banner__caption {
+    margin-top: 40px;
+}
 .donate-banner__caption h2 {
-    font-size: 16px;
+    font-size: 14px;
     text-transform: uppercase;
+    text-align: center;
 }
 .donate-banner__caption p {
     font-size: 12px;
 }
 
-
+@media all and (min-width: 600px) {
+    .donate-banner {
+        background-color: #E4EFF0;
+        margin: 0 auto;
+        position: relative;
+        height: 100%;
+        padding: 30px;
+    }
+    .donate-banner__contents {
+        padding-left: 162px;
+    }
+    .donate-banner__logo-wrapper{
+        position:absolute;
+        left: 0;
+        top: 50%;
+        z-index: 1;
+        margin-top: -66px;
+    }
+    .donate-banner__caption {
+        margin-top: 0;
+    }
+    .donate-banner__caption h2 {
+        font-size: 16px;
+        text-align:left;
+    }
+}
 @media all and (min-width: 768px) {
     .donate-banner__contents {
         max-width: 600px;
@@ -868,11 +907,11 @@ section:after{
     border-radius: 50%;
     line-height:24px;
     margin: 20px;
-    height:35px;
-    width: 35px;
+    height:32px;
+    width: 32px;
 }
 .footer-icon i {
-    font-size: 24px;
+    font-size: 22px;
     color:white;
     padding: 5px;
 }
