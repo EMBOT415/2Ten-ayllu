@@ -881,23 +881,24 @@ section:after{
     text-align: center;
 }
 .footer-newsletter__subscribe div{
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 .footer-newsletter__email {
     border-bottom: 1px solid grey;
-    width: 150px;
+    width: 250px;
     text-align: center;
     margin:0 auto;
+    padding-bottom: 5px;
 }
 .footer-newsletter__email a{
     text-align: center;
+    text-decoration: none;
 }
 .footer-newsletter__subscribe-button a{
     border: 1px solid grey;
-    padding: 5px;
+    padding: 5px 30px;
     text-transform: uppercase;
     text-decoration: none;
-    width: 150px;
     text-align: center;
     margin: 0 auto;
 }
@@ -906,7 +907,7 @@ section:after{
     background-color: grey;
     border-radius: 50%;
     line-height:24px;
-    margin: 20px;
+    margin: 5px;
     height:32px;
     width: 32px;
 }
