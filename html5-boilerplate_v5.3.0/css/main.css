@@ -437,6 +437,9 @@ section:after{
     .center-nav li:nth-child(2) {
         padding: 0px 30px;
     }
+    .right-nav__wrap {
+        width:15%;
+    }
     .right-nav  {
         position: relative;
         display: flex;
@@ -545,11 +548,6 @@ section:after{
     overflow: auto;
 }
 
-@media screen and (min-width: 768px) {
-    .drawer-cart {
-        display:none;
-    }
-}
 
 
 
@@ -919,12 +917,11 @@ section:after{
 
 @media all and (min-width: 600px) {
     .footer-menu__list {
-        display: flex;
+        display: inline-block;
     }
     .footer-menu__list li {
-        display:flex;
-        justify-content: space-between;
+        display: inline-block;
         text-align: center;
-        margin: 0 auto;
+        padding: 0px 20px;
     }
 }
